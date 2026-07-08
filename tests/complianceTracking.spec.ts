@@ -24,9 +24,9 @@ test('Compliance Tracking - Approve Multiple Violations', async ({ page }) => {
 
   // LOGIN TO CEPLE
   await page.locator(CT.login_button).click();
-  await page.locator(CT.email_input).fill(CT.global_admin_email);
+  await page.locator(CT.email_input).fill(process.env.GLOBAL_ADMIN_EMAIL!);
   await page.locator(CT.continue_button).click();
-  await page.locator(CT.pass_input).fill(CT.global_admin_pass)
+  await page.locator(CT.pass_input).fill(process.env.GLOBAL_ADMIN_PASS!);
   await page.locator(CT.login_submit).click();
   await page.waitForTimeout(10000);
 

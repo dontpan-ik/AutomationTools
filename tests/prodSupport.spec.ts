@@ -24,9 +24,9 @@ test('CPLE - Create New Transaction', async ({ page }) => {
 
   // LOGIN TO CEPLE
   await page.locator(CPLE.main_login_button).click();
-  await page.locator(CPLE.email_input).fill(CPLE.COLD_LINK_email);
+  await page.locator(CPLE.email_input).fill(process.env.COLD_LINK_email!);
   await page.locator(CPLE.continue_button).click();
-  await page.locator(CPLE.pass_input).fill(CPLE.COLD_LINK_pass);
+  await page.locator(CPLE.pass_input).fill(process.env.COLD_LINK_pass!);
   await page.locator(CPLE.login_submit).click();
 
   //VALIDATING RECENT TRANSACTION PAGE
@@ -68,7 +68,7 @@ test('CPLE - Create New Transaction', async ({ page }) => {
 test('CPLE - Create Multiple New Transactions', async ({ page }) => {
   /* ************* SETTING ************** */
   const CPLE = new ApexCPLE();
-  const TOTAL_TRANSACTIONS = 10;
+  const TOTAL_TRANSACTIONS = 2;
   const DOCK_OPTION = "FREEZER"; // for sites: 80005, 80007, 80008
   //const DOCK_OPTION = "SERVICES"; // for sites: 80006
   /* ************* SETTING ************** */
@@ -78,9 +78,9 @@ test('CPLE - Create Multiple New Transactions', async ({ page }) => {
 
   // LOGIN TO CEPLE
   await page.locator(CPLE.main_login_button).click();
-  await page.locator(CPLE.email_input).fill(CPLE.COLD_LINK_email);
+  await page.locator(CPLE.email_input).fill(process.env.COLD_LINK_email!);
   await page.locator(CPLE.continue_button).click();
-  await page.locator(CPLE.pass_input).fill(CPLE.COLD_LINK_pass);
+  await page.locator(CPLE.pass_input).fill(process.env.COLD_LINK_pass!);
   await page.locator(CPLE.login_submit).click();
 
   //VALIDATING RECENT TRANSACTION PAGE

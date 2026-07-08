@@ -1,8 +1,6 @@
 class ApexTime{
 
     public time_app_QA = "https://qa-time.capstonelogistics.com/login";
-    public apex_email = "";
-    public apex_pass = "";
 
     public email_input = "//app-root/app-login/div/div/div/div[2]/form/div[1]/input";
     public pass_input = "//app-root/app-login/div/div/div/div[2]/form/div[2]/input";

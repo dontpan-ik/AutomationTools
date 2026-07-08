@@ -12,10 +12,6 @@ class ApexCompliance {
     public CI_PROD = "https://complianceimaging.capstonelogistics.com/";
 
     // Login Page selectors and credentials
-    public global_admin_email = "";
-    public global_admin_pass = "";
-    public prod_sample_email = "";
-    public prod_sample_pass = "";
     public login_button = "//app-layout/main/app-landing-page/div/div/div[2]/app-button/button";
     public email_input = '//*[@id="signInName"]';
     public continue_button= '//*[@id="continue"]';

@@ -12,7 +12,7 @@ test('Save img from FB URL', async ({ page }) => {
   await page.goto(current_url);
   try{
     //LOGIN TO FACEBOOK
-    await FBpage.login(FBpage.fb_email, FBpage.fb_pass);
+    await FBpage.login(process.env.FB_EMAIL!, process.env.FB_PASS!);
     // SELECTING IMAGES ON THE GALLERY
     for(var i=0;i<total_iterations;i++){
       // GETTING CURRENT IMAGE SRC

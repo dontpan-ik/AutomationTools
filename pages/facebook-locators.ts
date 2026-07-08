@@ -1,10 +1,6 @@
 import { Page } from "@playwright/test";
 
 class FacebookLocators{
-
-    // FB CREDENTIALS
-    public fb_email = "";
-    public fb_pass = "";
     
     // PAGES URL
     public page_test = "https://www.facebook.com/HeyJalisc0/photos";

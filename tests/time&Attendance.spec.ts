@@ -11,8 +11,8 @@ test('Apex Time - Enter Next Time Punch', async ({ page }) => {
 
   // LOGIN IN TO APEX TIME
   await page.goto(TimeApp.time_app_QA);
-  await page.locator(TimeApp.email_input).fill(TimeApp.apex_email);
-  await page.locator(TimeApp.pass_input).fill(TimeApp.apex_pass);
+  await page.locator(TimeApp.email_input).fill(process.env.APEX_EMAIL!);
+  await page.locator(TimeApp.pass_input).fill(process.env.APEX_PASS!);
   await page.locator(TimeApp.login_button).click();
   //  VALIDATE PAGE DISPLAYMNET BY DATE HEADER
   await expect(page.locator(TimeApp.date_range_header)).toBeVisible();
@@ -75,8 +75,8 @@ test('Apex Time - Clock In All Associates', async ({ page }) => {
 
   // LOGIN IN TO APEX TIME
   await page.goto(TimeApp.time_app_QA);
-  await page.locator(TimeApp.email_input).fill(TimeApp.apex_email);
-  await page.locator(TimeApp.pass_input).fill(TimeApp.apex_pass);
+  await page.locator(TimeApp.email_input).fill(process.env.APEX_EMAIL!);
+  await page.locator(TimeApp.pass_input).fill(process.env.APEX_PASS!);
   await page.locator(TimeApp.login_button).click();
   //  VALIDATE PAGE DISPLAYMNET BY DATE HEADER
   await expect(page.locator(TimeApp.date_range_header)).toBeVisible();
@@ -140,8 +140,8 @@ test('Apex Time - Meal Break Start/End', async ({ page }) => {
 
   // LOGIN IN TO APEX TIME
   await page.goto(TimeApp.time_app_QA);
-  await page.locator(TimeApp.email_input).fill(TimeApp.apex_email);
-  await page.locator(TimeApp.pass_input).fill(TimeApp.apex_pass);
+  await page.locator(TimeApp.email_input).fill(process.env.APEX_EMAIL!);
+  await page.locator(TimeApp.pass_input).fill(process.env.APEX_PASS!);
   await page.locator(TimeApp.login_button).click();
   //  VALIDATE PAGE DISPLAYMNET BY DATE HEADER
   await expect(page.locator(TimeApp.date_range_header)).toBeVisible();
@@ -204,8 +204,8 @@ test('Apex Time - Clock Out', async ({ page }) => {
 
   // LOGIN IN TO APEX TIME
   await page.goto(TimeApp.time_app_QA);
-  await page.locator(TimeApp.email_input).fill(TimeApp.apex_email);
-  await page.locator(TimeApp.pass_input).fill(TimeApp.apex_pass);
+  await page.locator(TimeApp.email_input).fill(process.env.APEX_EMAIL!);
+  await page.locator(TimeApp.pass_input).fill(process.env.APEX_PASS!);
   await page.locator(TimeApp.login_button).click();
   //  VALIDATE PAGE DISPLAYMNET BY DATE HEADER
   await expect(page.locator(TimeApp.date_range_header)).toBeVisible();

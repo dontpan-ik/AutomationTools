@@ -8,12 +8,6 @@ class ApexCPLE{
     public main_login_button = "//app-root/div/div[2]/app-landing-page/div/div/div[2]/app-button/button/span[4]";
     public email_input = '//*[@id="signInName"]';
     public pass_input = '//*[@id="password"]';
-    public email_felip = "";
-    public pass_felip = "";
-    public COLD_LINK_email = "";
-    public COLD_LINK_pass = "";
-    public PROD_TEST_PARTNER_email = "";
-    public PROD_TEST_PARTNER_pass = "";
     public continue_button = '//*[@id="continue"]';
     public login_submit = '//*[@id="next"]';
     public us_phone = '2146766148';
