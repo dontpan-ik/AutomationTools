@@ -1,7 +1,16 @@
 declare const require: any;
+
 const { writeFileSync } = require('fs');
 import { test, expect, Page } from '@playwright/test';
 import FacebookLocators  from '../pages/facebook-locators';
+
+declare const process: {
+  env: {
+    FB_EMAIL?: string;
+    FB_PASS?: string;
+    [key: string]: string | undefined;
+  };
+};
 
 function saveTestResultLogsToFile(logEntries: string[], fileName = 'test_results_logs.txt') {
   const content = logEntries.length > 0 ? logEntries.join('\n') : 'No test logs captured.';

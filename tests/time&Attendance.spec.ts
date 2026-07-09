@@ -1,6 +1,14 @@
 import { test, expect, Page } from '@playwright/test';
 import ApexTime from '../pages/Apex-Time-app';
 
+declare const process: {
+  env: {
+    APEX_EMAIL?: string;
+    APEX_PASS?: string;
+    [key: string]: string | undefined;
+  };
+};
+
 test('Apex Time - Enter Next Time Punch', async ({ page }) => {
 
   // ********** SETTINGS *******************

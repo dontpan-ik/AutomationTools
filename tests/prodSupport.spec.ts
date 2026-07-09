@@ -1,6 +1,13 @@
 import { test, expect, Page } from '@playwright/test';
 import ApexCPLE from '../pages/Apex-CPLE';
 
+declare const process: {
+  env: {
+    COLD_LINK_email?: string;
+    COLD_LINK_pass?: string;
+    [key: string]: string | undefined;
+  };
+};
 // Function to serialize PO constant
 function serializePO(poValue: string): { po: string; timestamp: string; serialized: string } {
   return {
@@ -68,7 +75,7 @@ test('CPLE - Create New Transaction', async ({ page }) => {
 test('CPLE - Create Multiple New Transactions', async ({ page }) => {
   /* ************* SETTING ************** */
   const CPLE = new ApexCPLE();
-  const TOTAL_TRANSACTIONS = 2;
+  const TOTAL_TRANSACTIONS = 10;
   const DOCK_OPTION = "FREEZER"; // for sites: 80005, 80007, 80008
   //const DOCK_OPTION = "SERVICES"; // for sites: 80006
   /* ************* SETTING ************** */
