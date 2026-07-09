@@ -1,6 +1,14 @@
 import { test, expect, Page } from '@playwright/test';
 import ApexCompliance from '../pages/Apex-Compliance';
 
+declare const process: {
+  env: {
+    GLOBAL_ADMIN_EMAIL?: string;
+    GLOBAL_ADMIN_PASS?: string;
+    [key: string]: string | undefined;
+  };
+};
+
 // Function to serialize PO constant
 function serializePO(poValue: string): { po: string; timestamp: string; serialized: string } {
   return {

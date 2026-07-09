@@ -1,0 +1,34 @@
+[2026-07-09T12:59:55.674Z] [verbose] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o
+[2026-07-09T12:59:55.675Z] [verbose] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o
+[2026-07-09T12:59:55.778Z] [log] 
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;
+[2026-07-09T12:59:55.778Z] [log] 
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; 
+[2026-07-09T12:59:55.778Z] [log] 
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; 
+[2026-07-09T12:59:55.778Z] [log] 
+%c 
+[2026-07-09T12:59:55.827Z] [error] ErrorUtils caught an error:
+
+terminate stream because StartStreamFailure with msg : UNAUTHENTICATED [Caught in: Subscription error in preprocessResponse]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. {column: 180, clientTime: 1783601995, extra: Object, guardList: Array(0), hash: ooyvws}
+[2026-07-09T12:59:59.589Z] [error] Permissions policy violation: unload is not allowed in this document.
+[2026-07-09T13:00:00.614Z] [error] ErrorUtils caught an error:
+
+terminate stream because StartStreamFailure with msg : UNAUTHENTICATED [Caught in: Subscription error in preprocessResponse]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. {column: 180, clientTime: 1783602000, extra: Object, guardList: Array(0), hash: 3ijhs1}
+[2026-07-09T13:00:00.628Z] [log] 
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;
+[2026-07-09T13:00:00.628Z] [log] 
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; 
+[2026-07-09T13:00:00.629Z] [log] 
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; 
+[2026-07-09T13:00:00.629Z] [log] 
+%c 
+Error: Error: locator.getAttribute: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('//div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div[1]/div/div[1]/div/div[2]/div/div/div/img')[22m
+
+https://www.facebook.com/two_step_verification/authentication/?encrypted_context=AWROFDVeUfaMSVyXWyYaPdEyIjjg27-2stiuMwQIZ8TsAGa9fJig0z3Sg76uooiDyk5pJ1V3EDddBswlbyUBpB5DYq9KsN21fP_TccX7vOdEcv2CNPUl12Unmd0RgIE7iG4b1561EUHaEcvYgWkUdV7xg1m249MfqIrbI1yOIHD484qNFMnvHRDI0-O9ida12EZ6LlhDBQe5BmaAr59UeuezEzT9fK14FlgMb9mRorBhLcqL3xwm29yjbJwxswoGXFzt4TpArMQ5LQbRy4t2AD7Sdcdc_w9EaTcRazHR1tyeoiwDJ6zDM8M49QgOxIRZ8gpgXZwznqxgEoYf_HjOaJKVbtrTaAw2Yj_Z1WLJ_-HPca1qcrio-Hp66ljFyN5oT7A1ccJO8KIfstkzgaNi9POiLiuDNo1FbteVPylG5IaTfp1ykdlxpUkyKj0b_U5KHNHlbLpm32VuzsppOxkrgcODrIwLw39rv9UkcWin9bXuFpL1wjw3akInjsxAalaYir4HB4L4Vu1MWdH55oRW9__V_M9MIHJi6_Cgyl4fkBUpIeY_DaKqU2YHjVC_vDGi9b369GVhstLK2QH87r0LrdimFICTLJAW3HTACkOgpHQu-aFgJYw6c9R4jutevHAYyrGIb7GmzKIODvinZesWGe-fPujndSK_mhYkV4eZ7-DNmbARpkd0VsKCTyEgMpPeZJOwDTqFPY1EJ7D59itMZCAVr7YzchtFjhkPefjGnNdvbDIYztGsVZOVzE9UC8I-5jdhZd_ljPfwuEc3nJau7gFIKvRjNfggVnuTRGWsREIQKHrGpYLhsPLt8RyYHOenuMWs_d8xnGR2GlSBSr3_B6IZet6l0_COK-q-nJzNjMgGSQZJr6SElgtdiz9S1S9HeO6pjixYASHIXPSy-s9csLJbANLKQdrXOvd0BilJ1NQit5Mbj3xtdH5d-iAteLEptoFaWis3beyQR9FZNkKsZpHEJmiVaf1Q-Tms5E8xtO__avnvSmq8Zo6-4Gb0sAMU_BrVJtwdGMa-In76vlpVUy_HNpcDKPldgLlcKSdhcLPZcxKSfA7RdD8uJIvwQcINBdOWvTtE3YHBiAZBPAxy3lvTKrkAuM6pl_au3DqNDTseE7SdSLLmSHy36OXDSf07VRCNgtMuES8S5ebroEx12w7gzzabN_0BfCb4aZDAIaxWeG7aiup_ZZZgEPeLZ5E9oA0TsBtFmqprPpCPDtrYxN0fw3_b3N1pVZnTMU276Qzmj8aVwtcres6Iu8k1GV0uXAWyz9lzSAtNNcbgo00n877WGvplPYQDZUZQEUFRb7yGcVCHRJa66iY4IdwK3LcUU7CEbM0KujuvQHwby1OZHyuG7vS0wZ8OYNy7QaUi6KTvhQMFaKGZm3iNwBO5dOt6Ui7X-UO85ODy0BxRrTFtA3wFA3uteSRwTlZcaNmVL9_Jft696o25Hg&flow=pre_authentication&next=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D376352281450339%26set%3Dpb.100072267111882.-2207520000
