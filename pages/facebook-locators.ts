@@ -10,6 +10,7 @@ class FacebookLocators{
     public login_pass_input = '//*[@id="login_popup_cta_form"]/div/div/div/div[4]/div/div/label/div/input';
     public login_confirm_button = '//*[@id="login_popup_cta_form"]/div/div/div/div[5]/div';
     public next_img = '//div/div[3]/div/div/div[1]/div[1]/div/div[1]/div/div[1]/div/div[1]/div[3]/div/div/div';
+    public prev_img = '//div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div[1]/div/div[1]/div/div[1]/div[2]/div/div/div/div';
     public current_img = '//div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div[1]/div/div[1]/div/div[2]/div/div/div/img';
     // GETTING IMAGE DATE
     public current_img_date= '//*[@id="mount_0_0_+Y"]/div/div[1]/div/div[5]/div/div/div[3]/div[2]/div/div[3]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[2]';
@@ -27,6 +28,10 @@ class FacebookLocators{
 
     async selectNextImage() {
         await this.page.locator(this.next_img).click();
+    }
+
+    async selectPrevImage() {
+        await this.page.locator(this.prev_img).click();
     }
 }
 
