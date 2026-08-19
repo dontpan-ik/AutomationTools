@@ -8,4 +8,8 @@ node_modules/
 /playwright/.auth/
 node_modules/
 .env
+<<<<<<< Updated upstream
 test_results_logs.txt
+=======
+testImages/ 
+>>>>>>> Stashed changes

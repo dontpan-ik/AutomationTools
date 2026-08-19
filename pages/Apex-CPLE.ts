@@ -1,3 +1,5 @@
+import { expect, Page } from '@playwright/test';
+
 class ApexCPLE{
 
     public QAenv = "https://qa-stockholm.capstonelogistics.com/en/";
@@ -35,7 +37,82 @@ class ApexCPLE{
     public nt_payment_title = '//div/div/div[2]/mat-label';
     public nt_payment_amount = '//div[2]/div[2]/div/mat-dialog-container/div/div/app-transaction-management-modal/app-dialog-layout/section/div[2]/form/mat-tab-group/div/mat-tab-body[4]/div/div/mat-form-field/div[1]/div[2]/div/input';
     public nt_submit_button = '//div/div/app-transaction-management-modal/app-dialog-layout/section/div[3]/app-buttons-layout/div/div[1]/app-button[2]/button';
+    
+    constructor(private page: Page) {}
+    
+    async createNewTransaction(current_PO: string, dock_option: string) {
+        //VALIDATING RECENT TRANSACTION PAGE
+          await expect(this.page.locator(this.recent_transaction_title)).toBeVisible();
+          //VALIDATE NO TRANSACTIONS CASE
+          //await expect(this.page.locator("//app-root/div/div[2]/app-transaction-management/div/app-transaction-table-container/div/app-transaction-table/app-empty-table-container/div/p")).toBeVisible();
+          await this.page.locator(this.new_transaction_button).click();
+          await expect(this.page.locator(this.new_transaction_modal_title)).toBeVisible();
+        
+          // CREATING NEW TRANSACTION
+          await this.page.locator(this.nt_vendor_input).fill(current_PO);
+          await this.page.locator(this.nt_po_input).fill(current_PO);
+          await this.page.locator(this.nt_next_button).click();
+        
+          await this.page.locator(this.nt_carrier_search_input).fill("test");
+          await this.page.locator(this.nt_dock_input).click();
+          await this.page.locator('mat-option:has-text("'+dock_option+'")').click();
+          await this.page.locator(this.nt_door_input).fill('101');
+          await this.page.locator(this.nt_pallets_input).fill('101');
+          await this.page.locator(this.nt_cases_input).fill('101');
+          await this.page.locator(this.nt_next_button).click();
+          
+          await this.page.locator(this.nt_phone_input).fill('1111111111');
+          await this.page.locator(this.nt_trailer_input).fill('101');
+          await this.page.locator(this.nt_comments_input).fill('TEST');
+          await this.page.locator(this.nt_save_pay_button).click();
+        
+          //validate already created PO
+          await expect(this.page.locator(this.nt_payment_title)).toBeVisible();
+          await this.page.locator(this.nt_payment_amount).fill("10.11");
+          await this.page.locator(this.nt_submit_button).click();
+        
+          await expect(this.page.locator(this.recent_transaction_title)).toBeVisible();
+    }
 
+    async createTransactionBULK(current_PO: string, dock_option: string) {
+
+        await this.page.locator(this.new_transaction_button).click();
+        await expect(this.page.locator(this.new_transaction_modal_title)).toBeVisible();
+        
+        await this.page.locator(this.nt_vendor_input).fill(current_PO);
+        await this.page.locator(this.nt_po_input).fill(current_PO);
+        await this.page.locator(this.nt_next_button).click();
+        
+        await this.page.locator(this.nt_carrier_search_input).fill("test");
+        await this.page.locator(this.nt_dock_input).click();
+        await this.page.locator('mat-option:has-text("'+dock_option+'")').click();
+        await this.page.locator(this.nt_door_input).fill('101');
+        await this.page.locator(this.nt_pallets_input).fill('101');
+        await this.page.locator(this.nt_cases_input).fill('101');
+        await this.page.locator(this.nt_save_pay_button).click();
+
+        await this.page.locator(this.nt_phone_input).fill('1111111111');
+        await this.page.locator(this.nt_trailer_input).fill('101');
+        await this.page.locator(this.nt_comments_input).fill('TEST');
+        await this.page.locator(this.nt_next_button).click();
+    
+        //validate already created PO
+        await this.page.waitForTimeout(8000);
+        //await expect(this.page.locator(this.nt_payment_title)).toBeVisible();
+        await this.page.locator(this.nt_payment_amount).fill("10.11");
+        await this.page.locator(this.nt_submit_button).click();
+
+        await expect(this.page.locator(this.recent_transaction_title)).toBeVisible();
+        //await this.page.waitForTimeout(5000);
+    }
+}
+
+function serializePO(poValue: string): { po: string; timestamp: string; serialized: string } {
+  return {
+    po: poValue,
+    timestamp: new Date().toISOString(),
+    serialized: `${poValue}_${Date.now()}`
+  };
 }
 
 export default ApexCPLE;
