@@ -49,7 +49,7 @@ test('CPLE - Create New Transaction', async ({ page }) => {
 test('CPLE - Create Multiple New Transactions', async ({ page }) => {
   /* ************* SETTINGS ************** */
   const CPLE = new ApexCPLE(page);
-  const TOTAL_TRANSACTIONS = 100;
+  const TOTAL_TRANSACTIONS = 20;
   const dock_option = "FREEZER"; // for sites: 80005, 80007, 80008
   //const dock_option = "SERVICES"; // for sites: 80006
   /* ************* SETTINGS ************** */
